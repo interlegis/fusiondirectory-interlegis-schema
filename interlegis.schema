@@ -71,3 +71,12 @@ objectclass ( 1.3.6.1.4.1.43214.2.3.6 NAME 'saplSecondaryDBServer' SUP top AUXIL
   DESC 'Database secondary server for SAPL'
   MUST ( instanceGroup ) )
 
+objectclass ( 1.3.6.1.4.1.43214.2.3.7 NAME 'portalModeloRevProxyServer' SUP top AUXILIARY
+  DESC 'Reverse proxy (cache) server for Portal Modelo'
+  MUST ( instanceGroup ) )
+
+objectclass ( 1.3.6.1.4.1.43214.2.3.8 NAME 'saplRevProxyServer' SUP top AUXILIARY
+  DESC 'Reverse proxy (cache) server for SAPL'
+  MUST ( instanceGroup ) )
+
+
