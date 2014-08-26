@@ -32,17 +32,23 @@ attributetype ( 1.3.6.1.4.1.43214.2.1.4 NAME 'interlegisCode'
   SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
   SINGLE-VALUE )
 
+attributetype ( 1.3.6.1.4.1.43214.2.1.5 NAME 'prefix'
+  DESC 'Prefix to identify the portal, CM or AL.'
+  EQUALITY caseIgnoreMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE )
+
 
 
 # Object Classes
 objectclass (1.3.6.1.4.1.43214.2.2.1 NAME 'portalModelo'
   DESC 'Interlegis Product Portal Modelo'
-  MUST ( cn $ mail $ interlegisCode $ instanceGroup )
+  MUST ( cn $ mail $ interlegisCode $ instanceGroup $ prefix )
   MAY  ( description $ city $ activationDate ) )
 
 objectclass (1.3.6.1.4.1.43214.2.2.2 NAME 'sapl'
   DESC 'Interlegis Product SAPL'
-  MUST ( cn $ mail $ interlegisCode $ instanceGroup )
+  MUST ( cn $ mail $ interlegisCode $ instanceGroup $ prefix )
   MAY  ( description $ city $ activationDate ) )
 
 
